@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		//其中有一个最简单的办法，叫混入(mix)
+		function mix(o1,o2){//在jquery中将该函数命名为extend
+			for(var k in o2){
+				o1[k] = o2[k];
+			}
+		}
+		//
+		var o1 = {name : '张三'};
+		var o2 = {age: 19};
+		mix(o1,o2);//就是o2的成员一一加到o1中，使得o1具有两个对象的属性
+	</script>
+</html>
